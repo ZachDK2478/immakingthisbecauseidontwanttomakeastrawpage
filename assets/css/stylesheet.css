@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'sickass';
+    src: url('../fonts/KiottoDemo-pgo11.otf') format("otf");
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+p {
+    color: black;
+    font-size: 1.6rem;
+    font-family: 'sickass', sans-serif;
+}
