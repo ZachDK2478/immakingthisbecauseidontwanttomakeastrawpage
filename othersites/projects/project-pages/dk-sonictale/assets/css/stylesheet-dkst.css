@@ -10,13 +10,26 @@ src: url('../fonts/DTM-Sans.otf')  format('truetype');
 }
 
 /* ======== Type Selectors ======== */
+body {
+    font-family: 'Determination Sans', sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
 
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+}
 
 /* ======== Class Selectors ======== */
-
+/* Currently unused. */
 
 /* ======== Animations ======== */
-
+/* Currently unused. */
 
 /* ======== ID Selector ======== */
-
+/* Currently unused. */
