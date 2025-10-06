@@ -1,0 +1,74 @@
+/* ======== @ Rules ======== */
+@font-face {
+    font-family: 'AveriaLibre';
+    src: url('../fonts/AveriaLibre-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KiottoDemo';
+    src: url('../fonts/KiottoDemo-pgo11.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ======== Type Selectors ======== */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'AveriaLibre', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    font-family: 'AveriaLibre', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 2rem;
+    font-family: 'KiottoDemo', sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ======== Class Selectors ======== */
+.glow {
+    text-shadow: 4px 4px 7px white;
+}
+
+.container {
+  text-align: center;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.links {
+    color: yellow;
+    text-shadow: 3px 3px 6px yellow;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.links:hover {
+    color: white;
+    text-shadow: 3px 3px 6px white;
+}
+
+/* ======== Animations ======== */
