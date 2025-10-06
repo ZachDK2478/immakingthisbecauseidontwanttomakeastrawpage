@@ -68,6 +68,7 @@ img {
 .links:hover {
     animation-name: linksYellowtoWhite;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 /* ======== Animations ======== */
