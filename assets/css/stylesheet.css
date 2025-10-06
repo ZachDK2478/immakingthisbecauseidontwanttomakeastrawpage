@@ -6,10 +6,16 @@
 
 body {
     background-color: black;
+    color: white;
+    font-family: 'sickass', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: white;
+    text-shadow: 2px 2px 5px white;
 }
 
 h2 {
@@ -24,11 +30,16 @@ p {
     color: white;
     font-size: 2rem;
     font-family: 'sickass', sans-serif;
-    display: center;
+    text-align: center;
 }
 
 .container {
   text-align: center;
   border: 1px solid black;
   padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
