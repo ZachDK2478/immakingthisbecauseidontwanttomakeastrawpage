@@ -51,11 +51,20 @@ img {
 
 /* ======== Class Selectors ======== */
 .glow {
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 4px 4px 7px white;
 }
 
 .container {
   text-align: center;
   border: 1px solid black;
   padding: 20px;
+}
+
+.links {
+    color: yellow;
+    text-shadow: 3px 3px 6px yellow;
+}
+
+.links:hover {
+    color: red; /* Temp color */
 }
