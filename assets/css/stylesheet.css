@@ -63,16 +63,18 @@ img {
 .links {
     color: yellow;
     text-shadow: 3px 3px 6px yellow;
+    transition: color 0.4s, text-shadow 0.4s;
 }
 
 .links:hover {
-    animation-name: linksYellowtoWhite;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    color: white;
+    text-shadow: 3px 3px 6px white;
 }
 
 /* ======== Animations ======== */
+/*
 @keyframes linksYellowtoWhite {
-    from {color: yellow;}
-    to {color: white;}
+    from {color: yellow; text-shadow: 3px 3px 6px yellow;}
+    to {color: white; text-shadow: 3px 3px 6px white;}
 }
+*/
