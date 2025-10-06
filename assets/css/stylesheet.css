@@ -66,5 +66,12 @@ img {
 }
 
 .links:hover {
-    color: red; /* Temp color */
+    animation-name: linksYellowtoWhite;
+    animation-duration: 2s;
+}
+
+/* ======== Animations ======== */
+@keyframes linksYellowtoWhite {
+    from {color: yellow;}
+    to {color: white;}
 }
