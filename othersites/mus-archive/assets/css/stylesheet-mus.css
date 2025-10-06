@@ -79,7 +79,7 @@ a {
 .mus-player {
     text-align: center;
     color: white;
-    font-family: 'sickass', sans-serif;
+    font-family: 'AveriaLibre', sans-serif;
 }
 
 .mus-player-ui {
@@ -112,6 +112,7 @@ a {
     padding: 8px;
     cursor: pointer;
     transition: color 0.3s;
+    font-size: 1.2rem;
 }
 
 .playlist li:hover {
