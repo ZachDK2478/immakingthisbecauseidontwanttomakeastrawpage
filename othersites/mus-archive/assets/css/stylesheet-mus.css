@@ -1,14 +1,14 @@
 /* ======== @ Rules ======== */
 @font-face {
     font-family: 'AveriaLibre';
-    src: url('/assets/fonts/Averia_Libre/AveriaLibre-Regular.ttf');
+    src: url('../fonts/AveriaLibre-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'KiottoDemo';
-    src: url('/assets/fonts/KiottoDemo-pgo11.otf');
+    src: url('../fonts/KiottoDemo-pgo11.otf');
     font-weight: normal;
     font-style: normal;
 }
