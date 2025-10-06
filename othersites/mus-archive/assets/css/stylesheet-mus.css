@@ -49,6 +49,10 @@ img {
     height: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ======== Class Selectors ======== */
 .glow {
     text-shadow: 4px 4px 7px white;
@@ -71,4 +75,49 @@ img {
     text-shadow: 3px 3px 6px white;
 }
 
-/* ======== Animations ======== */
+/* ======== Music Player ======== */
+.mus-player {
+    text-align: center;
+    color: white;
+    font-family: 'sickass', sans-serif;
+}
+
+.mus-player-ui {
+    border: 2px solid yellow;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mus-player-controls button {
+    background: none;
+    border: 1px solid yellow;
+    color: yellow;
+    font-size: 1.2rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mus-player-controls button:hover {
+    background: yellow;
+    color: black;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.playlist li:hover {
+    color: yellow;
+}
+
+.progress-container input[type=range] {
+    width: 80%;
+}

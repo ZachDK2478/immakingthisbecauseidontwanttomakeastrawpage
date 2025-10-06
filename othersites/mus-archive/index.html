@@ -10,7 +10,98 @@
     <body>        
         <h1 class="glow" style="margin-top: 30px; margin-bottom: -10px;"> Ajax's Music Archive </h1>
 
-        <p> Music will be added here in due time. </p>
+        <p> More music will be added here in due time. </p>
+
+        <div class="mus-player">
+            <div class="mus-player-ui">
+                <h2 id="current-title">N/A</h2>
+                <audio id="audio" src=""></audio>
+
+                <div class="mus-player-controls">
+                    <button id="prev">⏮️</button>
+                    <button id="play">▶️</button>
+                    <button id="next">⏭️</button>
+                </div>
+
+                <div class="progress-container">
+                    <input type="range" id="progress" value="0" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="playlist">
+                <ul>
+                    <li data-src="assets/music/mus_catacombs.wav">Undertale Purple - The Catacombs</li>
+                    <li data-src="assets/music/mus_ghoul.wav">Undertale Purple - Ghoul Battle</li>
+                    <li data-src="assets/music/song3.mp3">Song 3 - TEST</li>
+                </ul>
+            </div>
+        </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const title = document.getElementById('current-title');
+        const playBtn = document.getElementById('play');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        const progress = document.getElementById('progress');
+        const playlistItems = document.querySelectorAll('.playlist li');
+
+        let currentIndex = -1;
+
+        function loadSong(index) {
+            const item = playlistItems[index];
+            if (!item) return;
+            audio.src = item.dataset.src;
+            title.textContent = item.textContent;
+            currentIndex = index;
+        }
+
+        function playSong() {
+            audio.play();
+            playBtn.textContent = '⏸️';
+        }
+
+        function pauseSong() {
+            audio.pause();
+            playBtn.textContent = '▶️';
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) playSong();
+            else pauseSong();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            loadSong((currentIndex + 1) % playlistItems.length);
+            playSong();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            loadSong((currentIndex - 1 + playlistItems.length) % playlistItems.length);
+            playSong();
+        });
+
+        playlistItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                loadSong(index);
+                playSong();
+            });
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            progress.value = (audio.currentTime / audio.duration) * 100 || 0;
+        });
+
+        progress.addEventListener('input', () => {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+        });
+
+        audio.addEventListener('ended', () => {
+            nextBtn.click(); // auto-skip when finished
+        });
+    </script>
+
+
     </body>
 
 </html>
